@@ -1,0 +1,133 @@
+2024-02-24 21:52:55.448 +05:30 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.Versioning.ApiVersionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2024-02-24 21:52:56.987 +05:30 [DBG] An additional 'IServiceProvider' was created for internal use by Entity Framework. An existing service provider was not used due to the following configuration changes: configuration changed for 'Core:ConfigureWarnings', configuration added for 'SqlServer'.
+2024-02-24 21:52:59.410 +05:30 [DBG] Entity Framework Core 7.0.1 initialized 'BookDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:7.0.1' with options: None
+2024-02-24 21:52:59.991 +05:30 [DBG] Compiling query expression: 
+'DbSet<Book>()
+    .Any()'
+2024-02-24 21:53:00.812 +05:30 [DBG] Generated query execution expression: 
+'queryContext => new SingleQueryingEnumerable<bool>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache.QueryExpression(
+        Projection Mapping:
+            EmptyProjectionMember -> 0
+        SELECT EXISTS (
+            SELECT 1
+            FROM Books AS b)), 
+    null, 
+    Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, bool>, 
+    BooksStore.Data.BookDbContext, 
+    False, 
+    False, 
+    True
+)
+    .Single()'
+2024-02-24 21:53:00.912 +05:30 [DBG] Creating DbCommand for 'ExecuteReader'.
+2024-02-24 21:53:00.926 +05:30 [DBG] Creating DbConnection.
+2024-02-24 21:53:01.014 +05:30 [DBG] Created DbConnection. (81ms).
+2024-02-24 21:53:01.057 +05:30 [DBG] Created DbCommand for 'ExecuteReader' (126ms).
+2024-02-24 21:53:01.065 +05:30 [DBG] Initialized DbCommand for 'ExecuteReader' (158ms).
+2024-02-24 21:53:01.093 +05:30 [DBG] Opening connection to database 'BookStoreLib_99' on server '(LocalDB)\MSSQLLocalDB'.
+2024-02-24 21:53:03.073 +05:30 [DBG] Opened connection to database 'BookStoreLib_99' on server '(LocalDB)\MSSQLLocalDB'.
+2024-02-24 21:53:03.087 +05:30 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Books] AS [b]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2024-02-24 21:53:03.201 +05:30 [INF] Executed DbCommand (118ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Books] AS [b]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2024-02-24 21:53:03.222 +05:30 [DBG] Closing data reader to 'BookStoreLib_99' on server '(LocalDB)\MSSQLLocalDB'.
+2024-02-24 21:53:03.246 +05:30 [DBG] A data reader for 'BookStoreLib_99' on server '(LocalDB)\MSSQLLocalDB' is being disposed after spending 23ms reading results.
+2024-02-24 21:53:03.252 +05:30 [DBG] Closing connection to database 'BookStoreLib_99' on server '(LocalDB)\MSSQLLocalDB'.
+2024-02-24 21:53:03.280 +05:30 [DBG] Closed connection to database 'BookStoreLib_99' on server '(LocalDB)\MSSQLLocalDB' (26ms).
+2024-02-24 21:53:03.286 +05:30 [DBG] SaveChanges starting for 'BookDbContext'.
+2024-02-24 21:53:03.293 +05:30 [DBG] DetectChanges starting for 'BookDbContext'.
+2024-02-24 21:53:03.297 +05:30 [DBG] DetectChanges completed for 'BookDbContext'.
+2024-02-24 21:53:03.304 +05:30 [DBG] SaveChanges completed for 'BookDbContext' with 0 entities written to the database.
+2024-02-24 21:53:03.306 +05:30 [DBG] 'BookDbContext' disposed.
+2024-02-24 21:53:03.313 +05:30 [DBG] Disposing connection to database 'BookStoreLib_99' on server '(LocalDB)\MSSQLLocalDB'.
+2024-02-24 21:53:03.316 +05:30 [DBG] Disposed connection to database '' on server '' (5ms).
+2024-02-24 21:53:03.330 +05:30 [DBG] Hosting starting
+2024-02-24 21:53:03.595 +05:30 [DBG] Loaded hosting startup assembly BooksStore
+2024-02-24 21:53:03.595 +05:30 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2024-02-24 21:53:03.595 +05:30 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2024-02-24 21:53:03.597 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2024-02-24 21:53:03.598 +05:30 [INF] Hosting environment: Development
+2024-02-24 21:53:03.599 +05:30 [INF] Content root path: C:\Users\deept\source\repos\.NetUpcomingSkilssAssignement\11-10-2022_Assessment\Asp.netcorepractical\Asp.netCore\BooksStore\
+2024-02-24 21:53:03.599 +05:30 [DBG] Hosting started
+2024-02-24 21:53:03.744 +05:30 [INF] Request starting HTTP/2 GET https://localhost:44390/api/Publishers/get-all-publishers - -
+2024-02-24 21:53:03.850 +05:30 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2024-02-24 21:53:03.899 +05:30 [DBG] 1 candidate(s) found for the request path '/api/Publishers/get-all-publishers'
+2024-02-24 21:53:03.905 +05:30 [DBG] Endpoint 'BooksStore.Controllers.PublishersController.GetAllPublishers (BooksStore)' with route pattern 'api/Publishers/get-all-publishers' is valid for the request path '/api/Publishers/get-all-publishers'
+2024-02-24 21:53:03.920 +05:30 [DBG] Request matched endpoint 'BooksStore.Controllers.PublishersController.GetAllPublishers (BooksStore)'
+2024-02-24 21:53:03.929 +05:30 [INF] Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /api/Publishers/get-all-publishers
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-IN,en-GB;q=0.9,en-US;q=0.8,en;q=0.7
+Connection: close
+Cookie: [Redacted]
+Host: localhost:44390
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+sec-ch-ua: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+upgrade-insecure-requests: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-user: [Redacted]
+sec-fetch-dest: [Redacted]
+2024-02-24 21:53:03.961 +05:30 [DBG] Static files was skipped as the request already matched an endpoint.
+2024-02-24 21:53:03.968 +05:30 [INF] Executing endpoint 'BooksStore.Controllers.PublishersController.GetAllPublishers (BooksStore)'
+2024-02-24 21:53:04.024 +05:30 [INF] Route matched with {action = "GetAllPublishers", controller = "Publishers"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllPublishers(System.String, System.String, Int32) on controller BooksStore.Controllers.PublishersController (BooksStore).
+2024-02-24 21:53:04.025 +05:30 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2024-02-24 21:53:04.026 +05:30 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2024-02-24 21:53:04.026 +05:30 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)","Microsoft.AspNetCore.Mvc.Versioning.ApplyContentTypeVersionActionFilter"]
+2024-02-24 21:53:04.026 +05:30 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2024-02-24 21:53:04.026 +05:30 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2024-02-24 21:53:04.027 +05:30 [DBG] Executing controller factory for controller BooksStore.Controllers.PublishersController (BooksStore)
+2024-02-24 21:53:04.038 +05:30 [DBG] Executed controller factory for controller BooksStore.Controllers.PublishersController (BooksStore)
+2024-02-24 21:53:04.058 +05:30 [DBG] Attempting to bind parameter 'sortby' of type 'System.String' ...
+2024-02-24 21:53:04.060 +05:30 [DBG] Attempting to bind parameter 'sortby' of type 'System.String' using the name '' in request data ...
+2024-02-24 21:53:04.061 +05:30 [DBG] Could not find a value in the request with name '' for binding parameter 'sortby' of type 'System.String'.
+2024-02-24 21:53:04.061 +05:30 [DBG] Done attempting to bind parameter 'sortby' of type 'System.String'.
+2024-02-24 21:53:04.061 +05:30 [DBG] Done attempting to bind parameter 'sortby' of type 'System.String'.
+2024-02-24 21:53:04.061 +05:30 [DBG] Attempting to validate the bound parameter 'sortby' of type 'System.String' ...
+2024-02-24 21:53:04.075 +05:30 [DBG] Done attempting to validate the bound parameter 'sortby' of type 'System.String'.
+2024-02-24 21:53:04.077 +05:30 [DBG] Attempting to bind parameter 'searchField' of type 'System.String' ...
+2024-02-24 21:53:04.077 +05:30 [DBG] Attempting to bind parameter 'searchField' of type 'System.String' using the name '' in request data ...
+2024-02-24 21:53:04.077 +05:30 [DBG] Could not find a value in the request with name '' for binding parameter 'searchField' of type 'System.String'.
+2024-02-24 21:53:04.077 +05:30 [DBG] Done attempting to bind parameter 'searchField' of type 'System.String'.
+2024-02-24 21:53:04.077 +05:30 [DBG] Done attempting to bind parameter 'searchField' of type 'System.String'.
+2024-02-24 21:53:04.077 +05:30 [DBG] Attempting to validate the bound parameter 'searchField' of type 'System.String' ...
+2024-02-24 21:53:04.077 +05:30 [DBG] Done attempting to validate the bound parameter 'searchField' of type 'System.String'.
+2024-02-24 21:53:04.077 +05:30 [DBG] Attempting to bind parameter 'pageNumber' of type 'System.Int32' ...
+2024-02-24 21:53:04.077 +05:30 [DBG] Attempting to bind parameter 'pageNumber' of type 'System.Int32' using the name '' in request data ...
+2024-02-24 21:53:04.077 +05:30 [DBG] Could not find a value in the request with name '' for binding parameter 'pageNumber' of type 'System.Int32'.
+2024-02-24 21:53:04.077 +05:30 [DBG] Done attempting to bind parameter 'pageNumber' of type 'System.Int32'.
+2024-02-24 21:53:04.077 +05:30 [DBG] Done attempting to bind parameter 'pageNumber' of type 'System.Int32'.
+2024-02-24 21:53:04.077 +05:30 [DBG] Attempting to validate the bound parameter 'pageNumber' of type 'System.Int32' ...
+2024-02-24 21:53:04.077 +05:30 [DBG] Done attempting to validate the bound parameter 'pageNumber' of type 'System.Int32'.
+2024-02-24 21:53:04.078 +05:30 [DBG] The request has model state errors, returning an error response.
+2024-02-24 21:53:04.082 +05:30 [DBG] Request was short circuited at action filter 'Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter'.
+2024-02-24 21:53:04.084 +05:30 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2024-02-24 21:53:04.088 +05:30 [DBG] No information found on request to perform content negotiation.
+2024-02-24 21:53:04.088 +05:30 [DBG] Attempting to select the first output formatter in the output formatters list which supports a content type from the explicitly specified content types '["application/problem+json","application/problem+xml","application/problem+json","application/problem+xml"]'.
+2024-02-24 21:53:04.089 +05:30 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/problem+json' to write the response.
+2024-02-24 21:53:04.090 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-02-24 21:53:04.262 +05:30 [INF] Executed action BooksStore.Controllers.PublishersController.GetAllPublishers (BooksStore) in 227.9154ms
+2024-02-24 21:53:04.263 +05:30 [INF] Executed endpoint 'BooksStore.Controllers.PublishersController.GetAllPublishers (BooksStore)'
+2024-02-24 21:53:04.264 +05:30 [INF] Response:
+
+2024-02-24 21:53:04.276 +05:30 [DBG] Connection ID "18230571305285976065" disconnecting.
+2024-02-24 21:53:04.287 +05:30 [INF] Request finished HTTP/2 GET https://localhost:44390/api/Publishers/get-all-publishers - - - 400 - application/problem+json;+charset=utf-8 548.3494ms

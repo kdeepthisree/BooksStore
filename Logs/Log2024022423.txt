@@ -1,0 +1,370 @@
+[Debug] Message:Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.Versioning.ApiVersionModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider", "Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"] 
+ [Debug] Message:An additional 'IServiceProvider' was created for internal use by Entity Framework. An existing service provider was not used due to the following configuration changes: "configuration changed for 'Core:ConfigureWarnings', configuration added for 'SqlServer'". 
+ [Debug] Message:Entity Framework Core "7.0.1" initialized '"BookDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer":"7.0.1"' with options: "None" 
+ [Debug] Message:Compiling query expression: "
+"'"DbSet<Book>()
+    .Any()"' 
+ [Debug] Message:Generated query execution expression: "
+"'"queryContext => new SingleQueryingEnumerable<bool>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache.QueryExpression(
+        Projection Mapping:
+            EmptyProjectionMember -> 0
+        SELECT EXISTS (
+            SELECT 1
+            FROM Books AS b)), 
+    null, 
+    Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, bool>, 
+    BooksStore.Data.BookDbContext, 
+    False, 
+    False, 
+    True
+)
+    .Single()"' 
+ [Debug] Message:Creating DbCommand for '"ExecuteReader"'. 
+ [Debug] Message:Creating DbConnection. 
+ [Debug] Message:Created DbConnection. (76ms). 
+ [Debug] Message:Created DbCommand for '"ExecuteReader"' (101ms). 
+ [Debug] Message:Initialized DbCommand for '"ExecuteReader"' (111ms). 
+ [Debug] Message:Opening connection to database '"BookStoreLib_99"' on server '"(LocalDB)\MSSQLLocalDB"'. 
+ [Debug] Message:Opened connection to database '"BookStoreLib_99"' on server '"(LocalDB)\MSSQLLocalDB"'. 
+ [Debug] Message:Executing DbCommand [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Books] AS [b]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END" 
+ [Information] Message:Executed DbCommand ("79"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Books] AS [b]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END" 
+ [Debug] Message:Closing data reader to '"BookStoreLib_99"' on server '"(LocalDB)\MSSQLLocalDB"'. 
+ [Debug] Message:A data reader for '"BookStoreLib_99"' on server '"(LocalDB)\MSSQLLocalDB"' is being disposed after spending 23ms reading results. 
+ [Debug] Message:Closing connection to database '"BookStoreLib_99"' on server '"(LocalDB)\MSSQLLocalDB"'. 
+ [Debug] Message:Closed connection to database '"BookStoreLib_99"' on server '"(LocalDB)\MSSQLLocalDB"' (13ms). 
+ [Debug] Message:SaveChanges starting for '"BookDbContext"'. 
+ [Debug] Message:DetectChanges starting for '"BookDbContext"'. 
+ [Debug] Message:DetectChanges completed for '"BookDbContext"'. 
+ [Debug] Message:SaveChanges completed for '"BookDbContext"' with 0 entities written to the database. 
+ [Debug] Message:'"BookDbContext"' disposed. 
+ [Debug] Message:Disposing connection to database '"BookStoreLib_99"' on server '"(LocalDB)\MSSQLLocalDB"'. 
+ [Debug] Message:Disposed connection to database '""' on server '""' (2ms). 
+ [Debug] Message:Hosting starting 
+ [Debug] Message:Loaded hosting startup assembly "BooksStore" 
+ [Debug] Message:Loaded hosting startup assembly "Microsoft.AspNetCore.Watch.BrowserRefresh" 
+ [Debug] Message:Loaded hosting startup assembly "Microsoft.WebTools.BrowserLink.Net" 
+ [Information] Message:Application started. Press Ctrl+C to shut down. 
+ [Information] Message:Hosting environment: "Development" 
+ [Information] Message:Content root path: "C:\Users\deept\source\repos\.NetUpcomingSkilssAssignement\11-10-2022_Assessment\Asp.netcorepractical\Asp.netCore\BooksStore\" 
+ [Debug] Message:Hosting started 
+ [Debug] Message:Connection ID ""18302628916503773188"" disconnecting. 
+ [Information] Message:Request starting HTTP/2 GET https://localhost:44390/api/Publishers/get-all-publishers - - 
+ [Information] Message:Request starting HTTP/2 GET https://localhost:44390/api/Publishers/get-all-publishers?sortby=name_desc&searchField=skdlsdfs&pageNumber=3 - - 
+ [Debug] Message:Wildcard detected, all requests with hosts will be allowed. 
+ [Debug] Message:Wildcard detected, all requests with hosts will be allowed. 
+ [Debug] Message:1 candidate(s) found for the request path '"/api/Publishers/get-all-publishers"' 
+ [Debug] Message:1 candidate(s) found for the request path '"/api/Publishers/get-all-publishers"' 
+ [Debug] Message:Endpoint '"BooksStore.Controllers.PublishersController.GetAllPublishers (BooksStore)"' with route pattern '"api/Publishers/get-all-publishers"' is valid for the request path '"/api/Publishers/get-all-publishers"' 
+ [Debug] Message:Endpoint '"BooksStore.Controllers.PublishersController.GetAllPublishers (BooksStore)"' with route pattern '"api/Publishers/get-all-publishers"' is valid for the request path '"/api/Publishers/get-all-publishers"' 
+ [Debug] Message:Request matched endpoint '"BooksStore.Controllers.PublishersController.GetAllPublishers (BooksStore)"' 
+ [Debug] Message:Request matched endpoint '"BooksStore.Controllers.PublishersController.GetAllPublishers (BooksStore)"' 
+ [Information] Message:Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /api/Publishers/get-all-publishers
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-IN,en-GB;q=0.9,en-US;q=0.8,en;q=0.7
+Connection: close
+Cookie: [Redacted]
+Host: localhost:44390
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+sec-ch-ua: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+upgrade-insecure-requests: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-user: [Redacted]
+sec-fetch-dest: [Redacted] 
+ [Information] Message:Request:
+Protocol: HTTP/2
+Method: GET
+Scheme: https
+PathBase: 
+Path: /api/Publishers/get-all-publishers
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-IN,en-GB;q=0.9,en-US;q=0.8,en;q=0.7
+Connection: close
+Cookie: [Redacted]
+Host: localhost:44390
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36
+sec-ch-ua: [Redacted]
+sec-ch-ua-mobile: [Redacted]
+sec-ch-ua-platform: [Redacted]
+upgrade-insecure-requests: [Redacted]
+sec-fetch-site: [Redacted]
+sec-fetch-mode: [Redacted]
+sec-fetch-user: [Redacted]
+sec-fetch-dest: [Redacted] 
+ [Debug] Message:Static files was skipped as the request already matched an endpoint. 
+ [Debug] Message:Static files was skipped as the request already matched an endpoint. 
+ [Information] Message:Executing endpoint '"BooksStore.Controllers.PublishersController.GetAllPublishers (BooksStore)"' 
+ [Information] Message:Executing endpoint '"BooksStore.Controllers.PublishersController.GetAllPublishers (BooksStore)"' 
+ [Information] Message:Route matched with "{action = \"GetAllPublishers\", controller = \"Publishers\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult GetAllPublishers(System.String, System.String, Int32)" on controller "BooksStore.Controllers.PublishersController" ("BooksStore"). 
+ [Information] Message:Route matched with "{action = \"GetAllPublishers\", controller = \"Publishers\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult GetAllPublishers(System.String, System.String, Int32)" on controller "BooksStore.Controllers.PublishersController" ("BooksStore"). 
+ [Debug] Message:Execution plan of "authorization" filters (in the following order): ["None"] 
+ [Debug] Message:Execution plan of "authorization" filters (in the following order): ["None"] 
+ [Debug] Message:Execution plan of "resource" filters (in the following order): ["None"] 
+ [Debug] Message:Execution plan of "resource" filters (in the following order): ["None"] 
+ [Debug] Message:Execution plan of "action" filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)", "Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)", "Microsoft.AspNetCore.Mvc.Versioning.ApplyContentTypeVersionActionFilter"] 
+ [Debug] Message:Execution plan of "action" filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)", "Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)", "Microsoft.AspNetCore.Mvc.Versioning.ApplyContentTypeVersionActionFilter"] 
+ [Debug] Message:Execution plan of "exception" filters (in the following order): ["None"] 
+ [Debug] Message:Execution plan of "exception" filters (in the following order): ["None"] 
+ [Debug] Message:Execution plan of "result" filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"] 
+ [Debug] Message:Execution plan of "result" filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"] 
+ [Debug] Message:Executing controller factory for controller "BooksStore.Controllers.PublishersController" ("BooksStore") 
+ [Debug] Message:Executing controller factory for controller "BooksStore.Controllers.PublishersController" ("BooksStore") 
+ [Debug] Message:Executed controller factory for controller "BooksStore.Controllers.PublishersController" ("BooksStore") 
+ [Debug] Message:Executed controller factory for controller "BooksStore.Controllers.PublishersController" ("BooksStore") 
+ [Debug] Message:Attempting to bind parameter '"sortby"' of type '"System.String"' ... 
+ [Debug] Message:Attempting to bind parameter '"sortby"' of type '"System.String"' using the name '""' in request data ... 
+ [Debug] Message:Could not find a value in the request with name '""' for binding parameter '"sortby"' of type '"System.String"'. 
+ [Debug] Message:Done attempting to bind parameter '"sortby"' of type '"System.String"'. 
+ [Debug] Message:Done attempting to bind parameter '"sortby"' of type '"System.String"'. 
+ [Debug] Message:Attempting to bind parameter '"sortby"' of type '"System.String"' ... 
+ [Debug] Message:Attempting to validate the bound parameter '"sortby"' of type '"System.String"' ... 
+ [Debug] Message:Attempting to bind parameter '"sortby"' of type '"System.String"' using the name '"sortby"' in request data ... 
+ [Debug] Message:Done attempting to bind parameter '"sortby"' of type '"System.String"'. 
+ [Debug] Message:Done attempting to bind parameter '"sortby"' of type '"System.String"'. 
+ [Debug] Message:Attempting to validate the bound parameter '"sortby"' of type '"System.String"' ... 
+ [Debug] Message:Done attempting to validate the bound parameter '"sortby"' of type '"System.String"'. 
+ [Debug] Message:Done attempting to validate the bound parameter '"sortby"' of type '"System.String"'. 
+ [Debug] Message:Attempting to bind parameter '"searchField"' of type '"System.String"' ... 
+ [Debug] Message:Attempting to bind parameter '"searchField"' of type '"System.String"' ... 
+ [Debug] Message:Attempting to bind parameter '"searchField"' of type '"System.String"' using the name '""' in request data ... 
+ [Debug] Message:Could not find a value in the request with name '""' for binding parameter '"searchField"' of type '"System.String"'. 
+ [Debug] Message:Done attempting to bind parameter '"searchField"' of type '"System.String"'. 
+ [Debug] Message:Attempting to bind parameter '"searchField"' of type '"System.String"' using the name '"searchField"' in request data ... 
+ [Debug] Message:Done attempting to bind parameter '"searchField"' of type '"System.String"'. 
+ [Debug] Message:Attempting to validate the bound parameter '"searchField"' of type '"System.String"' ... 
+ [Debug] Message:Done attempting to bind parameter '"searchField"' of type '"System.String"'. 
+ [Debug] Message:Done attempting to bind parameter '"searchField"' of type '"System.String"'. 
+ [Debug] Message:Attempting to validate the bound parameter '"searchField"' of type '"System.String"' ... 
+ [Debug] Message:Done attempting to validate the bound parameter '"searchField"' of type '"System.String"'. 
+ [Debug] Message:Done attempting to validate the bound parameter '"searchField"' of type '"System.String"'. 
+ [Debug] Message:Attempting to bind parameter '"pageNumber"' of type '"System.Int32"' ... 
+ [Debug] Message:Attempting to bind parameter '"pageNumber"' of type '"System.Int32"' ... 
+ [Debug] Message:Attempting to bind parameter '"pageNumber"' of type '"System.Int32"' using the name '""' in request data ... 
+ [Debug] Message:Attempting to bind parameter '"pageNumber"' of type '"System.Int32"' using the name '"pageNumber"' in request data ... 
+ [Debug] Message:Could not find a value in the request with name '""' for binding parameter '"pageNumber"' of type '"System.Int32"'. 
+ [Debug] Message:Done attempting to bind parameter '"pageNumber"' of type '"System.Int32"'. 
+ [Debug] Message:Done attempting to bind parameter '"pageNumber"' of type '"System.Int32"'. 
+ [Debug] Message:Attempting to validate the bound parameter '"pageNumber"' of type '"System.Int32"' ... 
+ [Debug] Message:Done attempting to validate the bound parameter '"pageNumber"' of type '"System.Int32"'. 
+ [Debug] Message:Done attempting to bind parameter '"pageNumber"' of type '"System.Int32"'. 
+ [Debug] Message:Done attempting to bind parameter '"pageNumber"' of type '"System.Int32"'. 
+ [Debug] Message:Attempting to validate the bound parameter '"pageNumber"' of type '"System.Int32"' ... 
+ [Debug] Message:Done attempting to validate the bound parameter '"pageNumber"' of type '"System.Int32"'. 
+ [Debug] Message:The request has model state errors, returning an error response. 
+ [Information] Message:this logs get all publishers 
+ [Debug] Message:Request was short circuited at action filter '"Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter"'. 
+ [Debug] Message:Entity Framework Core "7.0.1" initialized '"BookDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer":"7.0.1"' with options: "None" 
+ [Debug] Message:List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter", "Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter", "Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter", "Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"] 
+ [Debug] Message:Compiling query expression: "
+"'"DbSet<PublisherVM>()"' 
+ [Debug] Message:No information found on request to perform content negotiation. 
+ [Debug] Message:Attempting to select the first output formatter in the output formatters list which supports a content type from the explicitly specified content types '["application/problem+json", "application/problem+xml", "application/problem+json", "application/problem+xml"]'. 
+ [Debug] Message:Selected output formatter '"Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"' and content type '"application/problem+json"' to write the response. 
+ [Information] Message:Executing "BadRequestObjectResult", writing value of type '"Microsoft.AspNetCore.Mvc.ValidationProblemDetails"'. 
+ [Debug] Message:Generated query execution expression: "
+"'"queryContext => new SingleQueryingEnumerable<PublisherVM>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache.QueryExpression(
+        Projection Mapping:
+            EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: PublisherVM.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: PublisherVM.Name (string) Required, 1] }
+        SELECT p.Id, p.Name
+        FROM Publishers AS p), 
+    null, 
+    Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, PublisherVM>, 
+    BooksStore.Data.BookDbContext, 
+    False, 
+    False, 
+    True
+)"' 
+ [Debug] Message:Creating DbCommand for '"ExecuteReader"'. 
+ [Debug] Message:Creating DbConnection. 
+ [Debug] Message:Created DbConnection. (0ms). 
+ [Debug] Message:Created DbCommand for '"ExecuteReader"' (1ms). 
+ [Debug] Message:Initialized DbCommand for '"ExecuteReader"' (1ms). 
+ [Debug] Message:Opening connection to database '"BookStoreLib_99"' on server '"(LocalDB)\MSSQLLocalDB"'. 
+ [Debug] Message:Opened connection to database '"BookStoreLib_99"' on server '"(LocalDB)\MSSQLLocalDB"'. 
+ [Debug] Message:Executing DbCommand [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[Id], [p].[Name]
+FROM [Publishers] AS [p]" 
+ [Information] Message:Executed DbCommand ("8"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [p].[Id], [p].[Name]
+FROM [Publishers] AS [p]" 
+ [Debug] Message:Context '"BookDbContext"' started tracking '"PublisherVM"' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+ [Information] Message:Executed action "BooksStore.Controllers.PublishersController.GetAllPublishers (BooksStore)" in 4137.7571ms 
+ [Information] Message:Executed endpoint '"BooksStore.Controllers.PublishersController.GetAllPublishers (BooksStore)"' 
+ [Information] Message:Response:
+ 
+ [Debug] Message:Context '"BookDbContext"' started tracking '"PublisherVM"' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+ [Debug] Message:Context '"BookDbContext"' started tracking '"PublisherVM"' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+ [Debug] Message:Context '"BookDbContext"' started tracking '"PublisherVM"' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+ [Debug] Message:Context '"BookDbContext"' started tracking '"PublisherVM"' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+ [Debug] Message:Context '"BookDbContext"' started tracking '"PublisherVM"' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+ [Debug] Message:Context '"BookDbContext"' started tracking '"PublisherVM"' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+ [Debug] Message:Context '"BookDbContext"' started tracking '"PublisherVM"' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+ [Debug] Message:Context '"BookDbContext"' started tracking '"PublisherVM"' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+ [Debug] Message:Context '"BookDbContext"' started tracking '"PublisherVM"' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+ [Debug] Message:Context '"BookDbContext"' started tracking '"PublisherVM"' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+ [Debug] Message:Context '"BookDbContext"' started tracking '"PublisherVM"' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+ [Debug] Message:Context '"BookDbContext"' started tracking '"PublisherVM"' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values. 
+ [Debug] Message:Closing data reader to '"BookStoreLib_99"' on server '"(LocalDB)\MSSQLLocalDB"'. 
+ [Debug] Message:A data reader for '"BookStoreLib_99"' on server '"(LocalDB)\MSSQLLocalDB"' is being disposed after spending 129ms reading results. 
+ [Debug] Message:Closing connection to database '"BookStoreLib_99"' on server '"(LocalDB)\MSSQLLocalDB"'. 
+ [Debug] Message:Closed connection to database '"BookStoreLib_99"' on server '"(LocalDB)\MSSQLLocalDB"' (0ms). 
+ [Debug] Message:List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter", "Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter", "Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter", "Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"] 
+ [Debug] Message:No information found on request to perform content negotiation. 
+ [Debug] Message:Attempting to select an output formatter without using a content type as no explicit content types were specified for the response. 
+ [Debug] Message:Attempting to select the first formatter in the output formatters list which can write the result. 
+ [Debug] Message:Selected output formatter '"Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"' and content type '"application/json"' to write the response. 
+ [Information] Message:Executing "OkObjectResult", writing value of type '"BooksStore.Data.Pagination.PaginatedList`1[[BooksStore.Data.Models.PublisherVM, BooksStore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'. 
+ [Information] Message:Request finished HTTP/2 GET https://localhost:44390/api/Publishers/get-all-publishers - - - 0 - application/problem+json;+charset=utf-8 4421.3629ms 
+ [Information] Message:Executed action "BooksStore.Controllers.PublishersController.GetAllPublishers (BooksStore)" in 4303.8868ms 
+ [Information] Message:Executed endpoint '"BooksStore.Controllers.PublishersController.GetAllPublishers (BooksStore)"' 
+ [Information] Message:Response:
+ 
+ [Debug] Message:Connection ID ""18374686501951766539"" disconnecting. 
+ [Debug] Message:'"BookDbContext"' disposed. 
+ [Debug] Message:Disposing connection to database '"BookStoreLib_99"' on server '"(LocalDB)\MSSQLLocalDB"'. 
+ [Debug] Message:Disposed connection to database '""' on server '""' (1ms). 
+ [Information] Message:Request finished HTTP/2 GET https://localhost:44390/api/Publishers/get-all-publishers?sortby=name_desc&searchField=skdlsdfs&pageNumber=3 - - - 200 - application/json;+charset=utf-8;+v=1.0 4575.5062ms 
+ [Debug] Message:An additional 'IServiceProvider' was created for internal use by Entity Framework. An existing service provider was not used due to the following configuration changes: "configuration changed for 'Core:ConfigureWarnings', configuration added for 'SqlServer'". 
+ [Debug] Message:Entity Framework Core "7.0.1" initialized '"BookDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer":"7.0.1"' with options: "None" 
+ [Debug] Message:'"BookDbContext"' disposed. 
+ [Debug] Message:An additional 'IServiceProvider' was created for internal use by Entity Framework. An existing service provider was not used due to the following configuration changes: "configuration changed for 'Core:ConfigureWarnings', configuration added for 'SqlServer'". 
+ [Debug] Message:Entity Framework Core "7.0.1" initialized '"BookDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer":"7.0.1"' with options: "None" 
+ [Debug] Message:Creating DbConnection. 
+ [Debug] Message:Created DbConnection. (74ms). 
+ [Debug] Message:Migrating using database '"BookStoreLib_99"' on server '"(LocalDB)\MSSQLLocalDB"'. 
+ [Debug] Message:Opening connection to database '"BookStoreLib_99"' on server '"(LocalDB)\MSSQLLocalDB"'. 
+ [Debug] Message:Opened connection to database '"BookStoreLib_99"' on server '"(LocalDB)\MSSQLLocalDB"'. 
+ [Debug] Message:Creating DbCommand for '"ExecuteNonQuery"'. 
+ [Debug] Message:Created DbCommand for '"ExecuteNonQuery"' (2ms). 
+ [Debug] Message:Initialized DbCommand for '"ExecuteNonQuery"' (9ms). 
+ [Debug] Message:Executing DbCommand [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1" 
+ [Information] Message:Executed DbCommand ("30"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1" 
+ [Debug] Message:Closing connection to database '"BookStoreLib_99"' on server '"(LocalDB)\MSSQLLocalDB"'. 
+ [Debug] Message:Closed connection to database '"BookStoreLib_99"' on server '"(LocalDB)\MSSQLLocalDB"' (3ms). 
+ [Debug] Message:Creating DbCommand for '"ExecuteScalar"'. 
+ [Debug] Message:Created DbCommand for '"ExecuteScalar"' (0ms). 
+ [Debug] Message:Initialized DbCommand for '"ExecuteScalar"' (0ms). 
+ [Debug] Message:Opening connection to database '"BookStoreLib_99"' on server '"(LocalDB)\MSSQLLocalDB"'. 
+ [Debug] Message:Opened connection to database '"BookStoreLib_99"' on server '"(LocalDB)\MSSQLLocalDB"'. 
+ [Debug] Message:Executing DbCommand [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');" 
+ [Information] Message:Executed DbCommand ("50"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');" 
+ [Debug] Message:Closing connection to database '"BookStoreLib_99"' on server '"(LocalDB)\MSSQLLocalDB"'. 
+ [Debug] Message:Closed connection to database '"BookStoreLib_99"' on server '"(LocalDB)\MSSQLLocalDB"' (0ms). 
+ [Debug] Message:Opening connection to database '"BookStoreLib_99"' on server '"(LocalDB)\MSSQLLocalDB"'. 
+ [Debug] Message:Opened connection to database '"BookStoreLib_99"' on server '"(LocalDB)\MSSQLLocalDB"'. 
+ [Debug] Message:Creating DbCommand for '"ExecuteNonQuery"'. 
+ [Debug] Message:Created DbCommand for '"ExecuteNonQuery"' (0ms). 
+ [Debug] Message:Initialized DbCommand for '"ExecuteNonQuery"' (0ms). 
+ [Debug] Message:Executing DbCommand [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1" 
+ [Information] Message:Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1" 
+ [Debug] Message:Closing connection to database '"BookStoreLib_99"' on server '"(LocalDB)\MSSQLLocalDB"'. 
+ [Debug] Message:Closed connection to database '"BookStoreLib_99"' on server '"(LocalDB)\MSSQLLocalDB"' (0ms). 
+ [Debug] Message:Creating DbCommand for '"ExecuteScalar"'. 
+ [Debug] Message:Created DbCommand for '"ExecuteScalar"' (0ms). 
+ [Debug] Message:Initialized DbCommand for '"ExecuteScalar"' (0ms). 
+ [Debug] Message:Opening connection to database '"BookStoreLib_99"' on server '"(LocalDB)\MSSQLLocalDB"'. 
+ [Debug] Message:Opened connection to database '"BookStoreLib_99"' on server '"(LocalDB)\MSSQLLocalDB"'. 
+ [Debug] Message:Executing DbCommand [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');" 
+ [Information] Message:Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');" 
+ [Debug] Message:Closing connection to database '"BookStoreLib_99"' on server '"(LocalDB)\MSSQLLocalDB"'. 
+ [Debug] Message:Closed connection to database '"BookStoreLib_99"' on server '"(LocalDB)\MSSQLLocalDB"' (0ms). 
+ [Debug] Message:Creating DbCommand for '"ExecuteReader"'. 
+ [Debug] Message:Created DbCommand for '"ExecuteReader"' (0ms). 
+ [Debug] Message:Initialized DbCommand for '"ExecuteReader"' (0ms). 
+ [Debug] Message:Opening connection to database '"BookStoreLib_99"' on server '"(LocalDB)\MSSQLLocalDB"'. 
+ [Debug] Message:Opened connection to database '"BookStoreLib_99"' on server '"(LocalDB)\MSSQLLocalDB"'. 
+ [Debug] Message:Executing DbCommand [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];" 
+ [Information] Message:Executed DbCommand ("53"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];" 
+ [Debug] Message:Closing data reader to '"BookStoreLib_99"' on server '"(LocalDB)\MSSQLLocalDB"'. 
+ [Debug] Message:A data reader for '"BookStoreLib_99"' on server '"(LocalDB)\MSSQLLocalDB"' is being disposed after spending 1ms reading results. 
+ [Debug] Message:Closing connection to database '"BookStoreLib_99"' on server '"(LocalDB)\MSSQLLocalDB"'. 
+ [Debug] Message:Closed connection to database '"BookStoreLib_99"' on server '"(LocalDB)\MSSQLLocalDB"' (0ms). 
+ [Information] Message:Applying migration '"20240224175142_LogTableAdded"'. 
+ [Debug] Message:Opening connection to database '"BookStoreLib_99"' on server '"(LocalDB)\MSSQLLocalDB"'. 
+ [Debug] Message:Opened connection to database '"BookStoreLib_99"' on server '"(LocalDB)\MSSQLLocalDB"'. 
+ [Debug] Message:Beginning transaction with isolation level '"Unspecified"'. 
+ [Debug] Message:Began transaction with isolation level '"ReadCommitted"'. 
+ [Debug] Message:Creating DbCommand for '"ExecuteNonQuery"'. 
+ [Debug] Message:Created DbCommand for '"ExecuteNonQuery"' (0ms). 
+ [Debug] Message:Initialized DbCommand for '"ExecuteNonQuery"' (0ms). 
+ [Debug] Message:Executing DbCommand [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE TABLE [Logs] (
+    [Id] int NOT NULL IDENTITY,
+    [Message] nvarchar(max) NOT NULL,
+    [MessageTemplate] nvarchar(max) NOT NULL,
+    [Level] nvarchar(max) NOT NULL,
+    [Timestamp] nvarchar(max) NOT NULL,
+    [Exception] nvarchar(max) NOT NULL,
+    [Properties] nvarchar(max) NOT NULL,
+    [EventLog] nvarchar(max) NOT NULL,
+    CONSTRAINT [PK_Logs] PRIMARY KEY ([Id])
+);" 
+ [Information] Message:Executed DbCommand ("263"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE TABLE [Logs] (
+    [Id] int NOT NULL IDENTITY,
+    [Message] nvarchar(max) NOT NULL,
+    [MessageTemplate] nvarchar(max) NOT NULL,
+    [Level] nvarchar(max) NOT NULL,
+    [Timestamp] nvarchar(max) NOT NULL,
+    [Exception] nvarchar(max) NOT NULL,
+    [Properties] nvarchar(max) NOT NULL,
+    [EventLog] nvarchar(max) NOT NULL,
+    CONSTRAINT [PK_Logs] PRIMARY KEY ([Id])
+);" 
+ [Debug] Message:Creating DbCommand for '"ExecuteNonQuery"'. 
+ [Debug] Message:Created DbCommand for '"ExecuteNonQuery"' (1ms). 
+ [Debug] Message:Initialized DbCommand for '"ExecuteNonQuery"' (1ms). 
+ [Debug] Message:Executing DbCommand [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20240224175142_LogTableAdded', N'7.0.1');" 
+ [Information] Message:Executed DbCommand ("33"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20240224175142_LogTableAdded', N'7.0.1');" 
+ [Debug] Message:Committing transaction. 
+ [Debug] Message:Committed transaction. 
+ [Debug] Message:Disposing transaction. 
+ [Debug] Message:Closing connection to database '"BookStoreLib_99"' on server '"(LocalDB)\MSSQLLocalDB"'. 
+ [Debug] Message:Closed connection to database '"BookStoreLib_99"' on server '"(LocalDB)\MSSQLLocalDB"' (0ms). 
+ [Debug] Message:'"BookDbContext"' disposed. 
+ [Debug] Message:Disposing connection to database '"BookStoreLib_99"' on server '"(LocalDB)\MSSQLLocalDB"'. 
+ [Debug] Message:Disposed connection to database '""' on server '""' (1ms). 
+ 
